@@ -1,7 +1,5 @@
-import { useContext } from 'react';
+import { useAuth } from '../Hooks/useAuth';
 import { useHistory } from 'react-router';
-
-import { AuthContext } from '../App';
 
 import illustrationImg from '../assets/images/illustration.svg';
 import logoImg from '../assets/images/logo.svg';
@@ -14,7 +12,7 @@ import '../styles/auth.scss';
 
 export function Home(){
   const history = useHistory();
-  const {user, signInWithGoggle } = useContext(AuthContext)
+  const {user, signInWithGoggle } = useAuth();
 
   async function hadleCreateRoom(){ 
    if(!user){
