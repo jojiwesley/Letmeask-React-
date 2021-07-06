@@ -13,7 +13,8 @@ import '../styles/auth.scss';
 export function Home(){
   const history = useHistory();
   const {user, signInWithGoggle } = useAuth();
-
+  
+// FUNCTION VERIFICA SE EXISTE USUARIO 
   async function hadleCreateRoom(){ 
    if(!user){
      

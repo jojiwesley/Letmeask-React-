@@ -1,6 +1,6 @@
 import { createContext, ReactNode, useEffect, useState} from "react";
 import { auth,firebase} from "../services/firebase";
-//TIPAGENS DO TYPESCRYPT/////
+/* //TIPAGENS DO TYPESCRYPT///// */
 type User ={
   id: string,
   name: string,
@@ -46,7 +46,8 @@ export function AuthContextProvider(props: AuthContextProvider){
     }
   },[])
 /* VERIFICAÇÃO DE AUTENTIFICAÇÃO DO APP  */
-  async function signInWithGoggle(){
+
+  async function signInWithGoggle(){ /* FUNCTION QUE FAZ A AUTENTICAÇÃO COM GOOGLE VIA POPUP */ 
     const provider = new firebase.auth.GoogleAuthProvider();
     
     const result = await auth.signInWithPopup(provider);
